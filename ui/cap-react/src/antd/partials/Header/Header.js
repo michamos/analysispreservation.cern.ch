@@ -45,8 +45,8 @@ const Header = ({ logout, permissions, isLoggedIn }) => {
       ) : (
         <Col
           xs={{ order: 2, span: 12 }}
-          md={{ span: 16, offset: 4 }}
-          lg={{ span: 20, offset: 0 }}
+          md={{ span: 16, offset: 4, order: 2 }}
+          lg={{ span: 20, offset: 0, order: 2 }}
         >
           <SimpleMenu />
         </Col>
