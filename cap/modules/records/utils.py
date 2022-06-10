@@ -60,10 +60,15 @@ def url_to_api_url(url):
     if current_app.config.get('CAP_CLIENT_DEBUG'):
         return url
 
+    print("======")
+    print(url)
+    print("======")
     parts = parse.urlsplit(url)
     api_url = parse.urlunsplit(
         (parts.scheme, parts.netloc, '/api' + parts.path, parts.query,
          parts.fragment))
+    print(api_url)
+    print("===++===")
     return api_url
 
 
