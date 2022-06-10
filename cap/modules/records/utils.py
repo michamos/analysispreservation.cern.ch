@@ -62,12 +62,18 @@ def url_to_api_url(url):
 
     print("======")
     print(url)
+    current_app.logger.info(
+        f'Links url: {url}')
+
     print("======")
     parts = parse.urlsplit(url)
     api_url = parse.urlunsplit(
         (parts.scheme, parts.netloc, '/api' + parts.path, parts.query,
          parts.fragment))
     print(api_url)
+    current_app.logger.info(
+        f'Links url ----: {api_url}')
+
     print("===++===")
     return api_url
 
